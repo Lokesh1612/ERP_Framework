@@ -9,7 +9,8 @@ namespace MyDataCon
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Content/bootstrap/js/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -27,6 +28,10 @@ namespace MyDataCon
 
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                         "~/Content/bootstrap/css/bootstrap.css"));
+
+            bundles.Add(new ScriptBundle("~/Data").Include(
+                        "~/Scripts/data/data.js",
+                        "~/Scripts/data/buttonHandler.js"));
         }
     }
 }
